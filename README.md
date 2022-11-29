@@ -58,7 +58,7 @@ camera x rotation angle valid range (the tilt of the camera when facing the plan
     30-60 degrees (about the X-axis)
 
 base colour vectors: 
-    (0.0,0.0,0.0) to (1.0,1.0,1.0) colour vector coordinates
+    (0.0, 0.0, 0.0) to (1.0, 1.0, 1.0) colour vector coordinates
     
 #### Quadrant Description and Illustration 
 Subject mesh(es) will be instantiated at the specified quadrant.
@@ -73,8 +73,10 @@ In the context of the quadrant parameter, the 3 x 3 grid is as illustrated below
 the add-on will be available to use from the sidebar panel (of the 3D viewport) as a tab named 'Perspective Scene' 
 [place cursor in 3D viewport, press 'N' top open sidebar panel]
 
-(Note: Current script is unable to be imported as a zip/add-on because Blender restricts access to bpy.context and bpy.data. 
---> need code refactoring to update the addon to access the context during execution rather then on registration.)
+Note: Perspective Scene generation tool will only be available within the currently active Blender Session. 
+
+This is because: Current script is unable to be imported as a zip/add-on because Blender restricts access to bpy.context and bpy.data. 
+--> need code refactoring to update the addon to access the context during execution rather then on registration.
 
 ## Sample images that can be generated
 Note: 
