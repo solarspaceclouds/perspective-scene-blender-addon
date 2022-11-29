@@ -80,7 +80,7 @@ the add-on will be available to use from the sidebar panel (of the 3D viewport) 
 Note: 
 Sample Image uses an env1_choices collection which contains 2 types of tree meshes and a house mesh object selected as the subject (theChosenObject)
 
-<img width="283" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551511-a39603ee-b6ee-48e5-8d25-e2ad1a83c911.png"> <img width="683" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551675-a9d579ee-8687-42f3-b6b1-ac2b7f03b024.jpg">
+<img width="283" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551511-a39603ee-b6ee-48e5-8d25-e2ad1a83c911.png"> <img width="663" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551675-a9d579ee-8687-42f3-b6b1-ac2b7f03b024.jpg">
 
 ## Future Refinements/Additional Features/Bug Fixes
 Subject meshes instantiated (if >1) might experience collisions. (not sure)
