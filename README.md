@@ -2,7 +2,7 @@
 Blender python script to create a 3D scene with customizable subject, camera, environment options.
 
 ## Add-on Motivation
-There has been an increasing interest in prompt engineering to create AI-generated images. While trying out DiscoDiffusion model, a model which produces synthetic images via text (and optional image) prompting, it was observed that although the subject of the prompt was mostly accurately identified, the model had little sensitivity to distance specifications with respect to the subject. All images generated from the model put the subject as the main focus of the generated image, regardless of distance specifications.
+There has been an increasing interest in prompt engineering to create AI-generated images. While trying out such language-to-image models (which produces synthetic images via text and optional image prompting), it was observed that although the subject of the prompt was mostly accurately identified, the model had little sensitivity to distance specifications with respect to the subject. All images generated from the model put the subject as the main focus of the generated image, regardless of distance specifications.
 
 While this add-on does not incorporate AI methods, it aims to provide a means for generating images which take into account the distance and angle between the camera and the subject specified (among other customizable features described below).
 
@@ -39,11 +39,13 @@ Safer to click 'Scene collection' in the outliner right before generating the sc
 This add-on was created with the image of natural scenes in mind. Hence, [colour_1] and [colour_2] are pre-set to green and brown respectively. 
 A limitation of this add-on is that colours have to be specified by colour vector coordinates (0.0-1.0).
    
+This add-on was created using Blender version 3.1.2 
+
 ### The valid arguments for the customizable parameters are listed as follows: 
 theChosenObject (the Subject of the scene): 
     any object in the scene
 
-Quadrant (the portion of the plane that fits within the camera view sectioned as a 3 x 3 grid): 
+Quadrant (the portion of the plane that fits within the camera view sectioned as a 3 x 3 grid; subject mesh(es) will be instantiated at the specified quadrant): 
     top left, top middle, top right, middle left, middle middle, middle right, bottom left, bottom middle, bottom right
     
 Subject quantity valid range (number of subject meshes that can be instantiated in the specified quadrant): 
@@ -57,6 +59,13 @@ camera x rotation angle valid range (the tilt of the camera when facing the plan
 
 base colour vectors: 
     (0.0,0.0,0.0) to (1.0,1.0,1.0) colour vector coordinates
+    
+#### Quadrant Description and Illustration 
+Subject mesh(es) will be instantiated at the specified quadrant.
+In the context of the quadrant parameter, the 3 x 3 grid is as illustrated below:
+
+<img width="283" alt="botmid_3sub_far_grid" src= "https://user-images.githubusercontent.com/65459827/204558210-17f46320-b280-4f5f-8b43-c1002f7623d3.jpg">
+
 ## How to use
 1. download the perspective_scene.py file, 
 2. open it in blender, scripting tab
@@ -64,11 +73,12 @@ base colour vectors:
 the add-on will be available to use from the sidebar panel (of the 3D viewport) as a tab named 'Perspective Scene' 
 [place cursor in 3D viewport, press 'N' top open sidebar panel]
 
-(Current script is unable to be imported as an add-on because Blender restricts access to bpy.context and bpy.data. 
+(Note: Current script is unable to be imported as a zip/add-on because Blender restricts access to bpy.context and bpy.data. 
 --> need code refactoring to update the addon to access the context during execution rather then on registration.)
 
 ## Sample images that can be generated
-Note: Sample Image uses an env1_choices collection which contains 2 types of tree meshes
+Note: 
+Sample Image uses an env1_choices collection which contains 2 types of tree meshes and a house mesh object selected as the subject (theChosenObject)
 
 <img width="283" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551511-a39603ee-b6ee-48e5-8d25-e2ad1a83c911.png"> <img width="683" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551675-a9d579ee-8687-42f3-b6b1-ac2b7f03b024.jpg">
 
