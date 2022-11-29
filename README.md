@@ -8,8 +8,7 @@ While this add-on does not incorporate AI methods, it aims to provide a means fo
 
 ## Add-on Description
 The parameters of the add-on can be best understood through this text prompt template which references the following image:
-<img width="333" alt="botmid_3sub_far" src= "https://user-images.githubusercontent.com/65459827/204546533-54fc1146-8d02-4be1-9a70-a8ddd8c52111.png">
-
+<img width="283" alt="botmid_3sub_far" src= "https://user-images.githubusercontent.com/65459827/204546533-54fc1146-8d02-4be1-9a70-a8ddd8c52111.png">    
     "[2 (subject quantity)] [house (subject)]s in the [middle_right (quadrant)] section of the scene's plane, 
     where the camera is [Near (distance from camera)] the subject and the scene is 
     populated with particles of other objects in the [env1 choices] collections. 
