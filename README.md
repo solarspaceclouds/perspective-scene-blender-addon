@@ -4,7 +4,7 @@ Blender python script to create a 3D scene with customizable subject, camera, en
 ## Add-on Motivation
 There has been an increasing interest in prompt engineering to create AI-generated images. While trying out such language-to-image models (which produces synthetic images via text and optional image prompting), it was observed that although the subject of the prompt was mostly accurately identified, the model had little sensitivity to distance specifications with respect to the subject. All images generated from the model put the subject as the main focus of the generated image, regardless of distance specifications.
 
-While this add-on does not incorporate AI methods, it aims to provide a means for generating images which take into account the distance and angle between the camera and the subject specified (among other customizable features described below).
+While this add-on does not incorporate AI methods, it aims to provide a means for generating images which takes into account the distance and angle between the camera and the subject specified (among other customizable features described below).
 
 ## Add-on Description
 The parameters of the add-on can be best understood through this text prompt template which references the following image:
@@ -42,21 +42,27 @@ This add-on was created using Blender version 3.1.2
 
 ### The valid arguments for the customizable parameters are listed as follows: 
 theChosenObject (the Subject of the scene): 
+    
     any object in the scene
 
 Quadrant (the portion of the plane that fits within the camera view sectioned as a 3 x 3 grid; subject mesh(es) will be instantiated at the specified quadrant): 
+
     top left, top middle, top right, middle left, middle middle, middle right, bottom left, bottom middle, bottom right
     
 Subject quantity valid range (number of subject meshes that can be instantiated in the specified quadrant): 
+
     1-3
 
 Distance categories available (distance of camera to the subject mesh): 
+
     Near, Moderate, Far
 
 camera x rotation angle valid range (the tilt of the camera when facing the plane/scene to be rendered): 
+
     30-60 degrees (about the X-axis)
 
 base colour vectors: 
+    
     (0.0, 0.0, 0.0) to (1.0, 1.0, 1.0) colour vector coordinates
     
 #### Quadrant Description and Illustration 
@@ -66,10 +72,10 @@ In the context of the quadrant parameter, the 3 x 3 grid is as illustrated below
 <img width="283" alt="botmid_3sub_far_grid" src= "https://user-images.githubusercontent.com/65459827/204558210-17f46320-b280-4f5f-8b43-c1002f7623d3.jpg">
 
 ## How to use
-1. download the perspective_scene.py file, 
-2. open it in blender, scripting tab
-3. run the script
-the add-on will be available to use from the sidebar panel (of the 3D viewport) as a tab named 'Perspective Scene' 
+1. Download the perspective_scene.py file, 
+2. Open it in blender, scripting tab
+3. Run the script
+The add-on will be available to use from the sidebar panel (of the 3D viewport) as a tab named 'Perspective Scene' 
 [place cursor in 3D viewport, press 'N' top open sidebar panel]
 
 Note: Perspective Scene generation tool will only be available within the currently active Blender Session. 
