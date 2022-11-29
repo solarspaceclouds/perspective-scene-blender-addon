@@ -8,30 +8,55 @@ While this add-on does not incorporate AI methods, it aims to provide a means fo
 
 ## Add-on Description
 The parameters of the add-on can be best understood through this text prompt template which references the following image:
+<img width="333" alt="botmid_3sub_far" src= "https://user-images.githubusercontent.com/65459827/204546533-54fc1146-8d02-4be1-9a70-a8ddd8c52111.png">
 
-    "[2] [house]s in the [middle_right] section of the scene's plane, where the camera is [Neat] the subject and the scene is populated with particles of other objects in the [env1 choices] collections. 
-    
-    [particle_count] is the number of these objects that belong to the specified environment collection which are generated on the portion of the plane (which is fully visible to the camera) according to the [particle_scale].
-    
-    Where an environment collection is not available in the scene, it is recommended to have the selection boxes for [generate example collection] and [use example collection] checked.
-    
+    "[2 (subject quantity)] [house (subject)]s in the [middle_right (quadrant)] section of the scene's plane, 
+    where the camera is [Near (distance from camera)] the subject and the scene is 
+    populated with particles of other objects in the [env1 choices] collections. 
+    [particle_count] is the number of these objects that belong to the 
+    specified environment collection which are generated on the portion of the plane 
+    (which is fully visible to the camera) according to the [particle_scale].
+    Where an environment collection is not available in the scene, it is recommended to have the selection boxes for 
+    [Generate example collection] and [Use example collection] checked.
     The desired [camera x rotation] (tilting to face the plane) can be customizable from a range of 30-60 degrees.
-    
     The [render image] checkbox is available to opt for rendering an image of the camera view of the generated scene.
+    2 options [colour_1] and [colour_2] for base colours are provided to be mixed 
+    for a random base plane material shader with a mixture of the 2 colours specified."
     
-    2 options [colour_1] and [colour_2] for base colours are provided to be mixed for a random base plane material shader with a mixture of the 2 colours specified."
-    
+## Important Notes: 
+The current tool's logic prioritises [Generate sample collection] over the environment collection selection. 
+(i.e. if you want to use your own environment selection, do:
+1. Select your collection in [env_coll] 
+2. Uncheck BOTH the [Generate example collection] and [Use example collection] boxes.
+
+<img width="155" alt="image" src="https://user-images.githubusercontent.com/65459827/204555406-5a98f05c-e41b-491e-b344-9866f501ed69.png">
+
+Safer to click 'Scene collection' in the outliner right before generating the scene so that no other object is selected when the script runs. (might lead to unexpected errors)
+
+<img width="159" alt="image" src="https://user-images.githubusercontent.com/65459827/204555097-797d9f7d-4420-403c-a8b7-f9d61b642b14.png">
+
 ### Additional notes:
-    This add-on was created with the image of natural scenes in mind. Hence, [colour_1] and [colour_2] are pre-set to green and brown respectively. 
-    A limitation of this add-on is that colours have to be specified by colour vector coordinates (0.0-1.0).
-    
-
+This add-on was created with the image of natural scenes in mind. Hence, [colour_1] and [colour_2] are pre-set to green and brown respectively. 
+A limitation of this add-on is that colours have to be specified by colour vector coordinates (0.0-1.0).
+   
 ### The valid arguments for the customizable parameters are listed as follows: 
+theChosenObject (the Subject of the scene): 
+    any object in the scene
 
-Subject quantity valid range: 1-3
-Distance categories available: NEAR, MODERATE, FAR
-Angle valid range: 30-60 degrees (about the X-axis)
+Quadrant (the portion of the plane that fits within the camera view sectioned as a 3 x 3 grid): 
+    top left, top middle, top right, middle left, middle middle, middle right, bottom left, bottom middle, bottom right
+    
+Subject quantity valid range (number of subject meshes that can be instantiated in the specified quadrant): 
+    1-3
 
+Distance categories available (distance of camera to the subject mesh): 
+    Near, Moderate, Far
+
+camera x rotation angle valid range (the tilt of the camera when facing the plane/scene to be rendered): 
+    30-60 degrees (about the X-axis)
+
+base colour vectors: 
+    (0.0,0.0,0.0) to (1.0,1.0,1.0) colour vector coordinates
 ## How to use
 1. download the perspective_scene.py file, 
 2. open it in blender, scripting tab
@@ -42,5 +67,11 @@ the add-on will be available to use from the sidebar panel (of the 3D viewport) 
 (Current script is unable to be imported as an add-on because Blender restricts access to bpy.context and bpy.data. 
 --> need code refactoring to update the addon to access the context during execution rather then on registration.)
 
+## Sample images that can be generated
+Note: Sample Image uses an env1_choices collection which contains 2 types of tree meshes
+
+<img width="283" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551511-a39603ee-b6ee-48e5-8d25-e2ad1a83c911.png"> <img width="683" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551675-a9d579ee-8687-42f3-b6b1-ac2b7f03b024.jpg">
+
 ## Future Refinements/Additional Features/Bug Fixes
+Subject meshes instantiated (if >1) might experience collisions. (not sure)
 
