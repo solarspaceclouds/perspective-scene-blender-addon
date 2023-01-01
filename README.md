@@ -45,12 +45,6 @@ Safer to click 'Scene collection' in the outliner right before generating the sc
 
 <img width="159" alt="image" src="https://user-images.githubusercontent.com/65459827/204555097-797d9f7d-4420-403c-a8b7-f9d61b642b14.png">
 
-### Additional notes:
-This add-on was created with the image of natural scenes in mind. Hence, [colour_1] and [colour_2] are pre-set to green and brown respectively. 
-A limitation of this add-on is that colours have to be specified by colour vector coordinates (0.0-1.0).
-   
-This add-on was created using Blender version 3.1.2 
-
 ### The valid arguments for the customizable parameters are listed as follows: 
 theChosenObject (the Subject of the scene): 
     
@@ -87,6 +81,19 @@ Note:
 Sample Image uses an env1_choices collection which contains 2 types of tree meshes and a house mesh object selected as the subject (theChosenObject)
 
 <img width="283" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551511-a39603ee-b6ee-48e5-8d25-e2ad1a83c911.png"> <img width="663" alt="botmid_3sub_far" src="https://user-images.githubusercontent.com/65459827/204551675-a9d579ee-8687-42f3-b6b1-ac2b7f03b024.jpg">
+
+### Rendered images filepath
+Rendered images are labelled by the timestamp in the render filepath folder location specified in the render settings.
+
+### Additional notes:
+This add-on was created with the image of natural scenes in mind. Hence, [colour_1] and [colour_2] are pre-set to green and brown respectively. 
+A limitation of this add-on is that colours have to be specified by colour vector coordinates (0.0-1.0).
+   
+This add-on was created using Blender version 3.1.2 
+
+#### Render engine
+Default render engine is Cycles with GPU compute if GPU is available on the local machine. 
+Otherwise, Eevee render engine is used to render images (may result in images with strobing effect of the background plane)
 
 ## Future Refinements/Additional Features/Bug Fixes
 Subject meshes instantiated (if >1) might experience collisions. (not sure)
