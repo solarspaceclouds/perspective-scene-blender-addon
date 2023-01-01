@@ -6,11 +6,11 @@ The add-on will be available to use from the sidebar panel (of the 3D viewport) 
 [place cursor in 3D viewport, press 'N' top open sidebar panel]
 
 ### Specific Instructions
-1. Download the zip file, 
-2. Install the addon in Blender under Edit > Preferences > Install
-3. Check (select) the Perspective Scene Generation addon (found as 'Add Mesh: Perspective Scene addon')
-4. Hover mouse in 3D Viewport, press 'N' to open the sidebar
-5. Perspective Scene addon is visible on the sidebar and ready for use
+1. Download the zip file, extract files.
+3. Install the addon in Blender under Edit > Preferences > Install (choose the **perspective_scene_generation_addon_v1.py** file)
+4. Check (select) the Perspective Scene Generation addon (found as 'Add Mesh: Perspective Scene addon')
+5. Hover mouse in 3D Viewport, press 'N' to open the sidebar
+6. Perspective Scene addon is visible on the sidebar and ready for use
 
 ## Add-on Motivation
 There has been an increasing interest in prompt engineering to create AI-generated images. While trying out such language-to-image models (which produces synthetic images via text and optional image prompting), it was observed that although the subject of the prompt was mostly accurately identified, the model had little sensitivity to distance specifications with respect to the subject. All images generated from the model put the subject as the main focus of the generated image, regardless of distance specifications.
@@ -36,8 +36,8 @@ The parameters of the add-on can be best understood through this text prompt tem
 ## Important Notes: 
 The current tool's logic prioritises [Generate sample collection] over the environment collection selection. 
 (i.e. if you do not have an existing collection of objects (to be used as environment collection) in Blender and want to see how the code works, do:
-#### Check BOTH the [Generate example collection] and [Use example collection] boxes.
-Note: by default, the Generate example collection and Use example collection boxes are UNCHECKED.
+**Check BOTH the [Generate example collection] and [Use example collection] boxes.**
+Note: by default, the Generate example collection and Use example collection boxes are **UNCHECKED**.
 
 <img width="155" alt="image" src="https://user-images.githubusercontent.com/65459827/204555406-5a98f05c-e41b-491e-b344-9866f501ed69.png">
 
