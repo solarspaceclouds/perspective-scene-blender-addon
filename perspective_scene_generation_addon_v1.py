@@ -1029,7 +1029,7 @@ def unregister():
     # del(bpy.types.Scene.QueryProps)
  
     # not sure if the next lines are necessary
-    del bpy.types.Object.theChosenObject
+#    del bpy.types.Object.theChosenObject
 
 #    bpy.utils.unregister_module(__name__)
 
