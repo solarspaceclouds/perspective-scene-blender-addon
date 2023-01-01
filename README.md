@@ -1,6 +1,17 @@
 # perspective-scene-blender-addon
 Blender python script to create a 3D scene with customizable subject, camera, environment options.
 
+## How to use
+The add-on will be available to use from the sidebar panel (of the 3D viewport) as a tab named 'Perspective Scene' 
+[place cursor in 3D viewport, press 'N' top open sidebar panel]
+
+### Specific Instructions
+1. Download the zip file, 
+2. Install the addon in Blender under Edit > Preferences > Install
+3. Check (select) the Perspective Scene Generation addon (found as 'Add Mesh: Perspective Scene addon')
+4. Hover mouse in 3D Viewport, press 'N' to open the sidebar
+5. Perspective Scene addon is visible on the sidebar and ready for use
+
 ## Add-on Motivation
 There has been an increasing interest in prompt engineering to create AI-generated images. While trying out such language-to-image models (which produces synthetic images via text and optional image prompting), it was observed that although the subject of the prompt was mostly accurately identified, the model had little sensitivity to distance specifications with respect to the subject. All images generated from the model put the subject as the main focus of the generated image, regardless of distance specifications.
 
@@ -24,9 +35,9 @@ The parameters of the add-on can be best understood through this text prompt tem
     
 ## Important Notes: 
 The current tool's logic prioritises [Generate sample collection] over the environment collection selection. 
-(i.e. if you want to use your own environment selection, do:
-1. Select your collection in [env_coll] 
-2. Uncheck BOTH the [Generate example collection] and [Use example collection] boxes.
+(i.e. if you do not have an existing collection of objects (to be used as environment collection) in Blender and want to see how the code works, do:
+#### Check BOTH the [Generate example collection] and [Use example collection] boxes.
+Note: by default, the Generate example collection and Use example collection boxes are UNCHECKED.
 
 <img width="155" alt="image" src="https://user-images.githubusercontent.com/65459827/204555406-5a98f05c-e41b-491e-b344-9866f501ed69.png">
 
@@ -70,18 +81,6 @@ Subject mesh(es) will be instantiated at the specified quadrant.
 In the context of the quadrant parameter, the 3 x 3 grid is as illustrated below:
 
 <img width="283" alt="botmid_3sub_far_grid" src= "https://user-images.githubusercontent.com/65459827/204558210-17f46320-b280-4f5f-8b43-c1002f7623d3.jpg">
-
-## How to use
-1. Download the perspective_scene.py file, 
-2. Open it in blender, scripting tab
-3. Run the script
-The add-on will be available to use from the sidebar panel (of the 3D viewport) as a tab named 'Perspective Scene' 
-[place cursor in 3D viewport, press 'N' top open sidebar panel]
-
-Note: Perspective Scene generation tool will only be available within the currently active Blender Session. 
-
-This is because: Current script is unable to be imported as a zip/add-on because Blender restricts access to bpy.context and bpy.data. 
---> need code refactoring to update the addon to access the context during execution rather then on registration.
 
 ## Sample images that can be generated
 Note: 
