@@ -108,5 +108,6 @@ A limitation of this add-on is that colours have to be specified by colour vecto
 This add-on was created using Blender version 3.1.2 
 
 ## Future Refinements/Additional Features/Bug Fixes
-Subject meshes instantiated (if >1) might experience collisions. (not sure)
+Subject meshes instantiated (if >1) might experience collisions.
+- Future version of this addon may include collision handling: change hair paritcle system to emitter particle system, render images from keyfrom 5 onwards to allow for emitter particle system's collision handling to take effect
 
