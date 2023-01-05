@@ -46,11 +46,11 @@ The current tool's logic prioritises [Generate sample collection] over the envir
 **Check BOTH the [Generate example collection] and [Use example collection] boxes.**
 Note: by default, the Generate example collection and Use example collection boxes are **UNCHECKED**.
 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/65459827/204555406-5a98f05c-e41b-491e-b344-9866f501ed69.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/65459827/204555406-5a98f05c-e41b-491e-b344-9866f501ed69.png">
 
 Safer to click 'Scene collection' in the outliner right before generating the scene so that no other object is selected when the script runs. (might lead to unexpected errors)
 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/65459827/204555097-797d9f7d-4420-403c-a8b7-f9d61b642b14.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/65459827/204555097-797d9f7d-4420-403c-a8b7-f9d61b642b14.png">
 
 ### The valid arguments for the customizable parameters are listed as follows: 
 theChosenObject (the Subject of the scene): 
