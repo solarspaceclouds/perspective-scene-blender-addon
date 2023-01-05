@@ -19,17 +19,24 @@ While this add-on does not incorporate AI methods, it aims to provide a means fo
 
 ## Add-on Description
 The parameters of the add-on can be best understood through this text prompt template which references the following image:
+
 <img width="283" alt="botmid_3sub_far" src= "https://user-images.githubusercontent.com/65459827/204546533-54fc1146-8d02-4be1-9a70-a8ddd8c52111.png">    
+    
     "[2 (subject quantity)] [house (subject)]s in the [middle_right (quadrant)] section of the scene's plane, 
     where the camera is [Near (distance from camera)] the subject and the scene is 
     populated with particles of other objects in the [env1 choices] collections. 
+    
     [particle_count] is the number of these objects that belong to the 
     specified environment collection which are generated on the portion of the plane 
     (which is fully visible to the camera) according to the [particle_scale].
+    
     Where an environment collection is not available in the scene, it is recommended to have the selection boxes for 
     [Generate example collection] and [Use example collection] checked.
+    
     The desired [camera x rotation] (tilting to face the plane) can be customizable from a range of 30-60 degrees.
+    
     The [render image] checkbox is available to opt for rendering an image of the camera view of the generated scene.
+    
     2 options [colour_1] and [colour_2] for base colours are provided to be mixed 
     for a random base plane material shader with a mixture of the 2 colours specified."
     
@@ -85,15 +92,20 @@ Sample Image uses an env1_choices collection which contains 2 types of tree mesh
 ### Rendered images filepath
 Rendered images are labelled by the timestamp in the render filepath folder location specified in the render settings.
 
+### Render engine
+Default render engine is Cycles with GPU compute if GPU is available on the local machine. 
+Otherwise, Eevee render engine is used to render images (may result in images with strobing effect of the background plane)
+
+### Potential misalignment of environment objects particle system on plane surface:
+To fix the misalignment of the environment collection's particle system:
+
+select the relevant object in the environment collection > tab into edit mode > press G key > press X key then move mouse to adjust the particle system to be at the desired Z location > click to finalise particle system Z location. 
+
 ### Additional notes:
 This add-on was created with the image of natural scenes in mind. Hence, [colour_1] and [colour_2] are pre-set to green and brown respectively. 
 A limitation of this add-on is that colours have to be specified by colour vector coordinates (0.0-1.0).
    
 This add-on was created using Blender version 3.1.2 
-
-#### Render engine
-Default render engine is Cycles with GPU compute if GPU is available on the local machine. 
-Otherwise, Eevee render engine is used to render images (may result in images with strobing effect of the background plane)
 
 ## Future Refinements/Additional Features/Bug Fixes
 Subject meshes instantiated (if >1) might experience collisions. (not sure)
