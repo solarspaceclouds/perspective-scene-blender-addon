@@ -57,7 +57,7 @@ theChosenObject (the Subject of the scene):
     
     any object in the scene
 
-Quadrant (the portion of the plane that fits within the camera view sectioned as a 3 x 3 grid; subject mesh(es) will be instantiated at the specified quadrant): 
+Quadrant (the portion of the plane that fits within the camera view sectioned as a 3 x 3 grid; subject mesh(es) will be instantiated at the specified quadrant (box section)): 
 
     top left, top middle, top right, middle left, middle middle, middle right, bottom left, bottom middle, bottom right
     
