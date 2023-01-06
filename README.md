@@ -1,7 +1,7 @@
 # perspective-scene-blender-addon
 Blender python script to create a 3D scene with customizable subject, camera, environment options.
 
-## How to use
+## Addon Installation Details
 The add-on will be available to use from the sidebar panel (of the 3D viewport) as a tab named 'Perspective Scene' 
 [place cursor in 3D viewport, press 'N' top open sidebar panel]
 
@@ -17,7 +17,7 @@ There has been an increasing interest in prompt engineering to create AI-generat
 
 While this add-on does not incorporate AI methods, it aims to provide a means for generating images which takes into account the distance and angle between the camera and the subject specified (among other customizable features described below).
 
-## Add-on Description
+## Add-on Description [**How to use**]
 The parameters of the add-on can be best understood through this text prompt template which references the following image:
 
 <img width="283" alt="botmid_3sub_far" src= "https://user-images.githubusercontent.com/65459827/204546533-54fc1146-8d02-4be1-9a70-a8ddd8c52111.png">    
@@ -97,9 +97,11 @@ Default render engine is Cycles with GPU compute if GPU is available on the loca
 Otherwise, Eevee render engine is used to render images (may result in images with strobing effect of the background plane)
 
 ### Potential misalignment of environment objects particle system on plane surface:
-To fix the misalignment of the environment collection's particle system:
+To fix the misalignment of the environment collection's particle system in Blender:
 
 select the relevant object in the environment collection > tab into edit mode > press G key > press X key then move mouse to adjust the particle system to be at the desired Z location > click to finalise particle system Z location. 
+
+Recommended to set origin of mesh objects to be at the base of the mesh object. [Shift + Right Click to position 3D cursor to desired location > In Object Mode, Right Click > Set Origin > To 3D Cursor}
 
 ### Additional notes:
 This add-on was created with the image of natural scenes in mind. Hence, [colour_1] and [colour_2] are pre-set to green and brown respectively. 
